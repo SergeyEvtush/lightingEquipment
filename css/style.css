@@ -59,6 +59,17 @@ body {
 	left: 0;
 	object-fit: cover;
 	}
+	.main-block__color{
+		position: absolute;
+		height: 100%;
+		width:444px ;
+		top: 0;
+		left: 0;
+		background: 	#005BC199;
+		z-index: 1;
+		margin:80px 0px  0px 0px ;
+	}
+	/*стили шапки*/
 	.header{
 		position: absolute;
 		width: 100%;
@@ -66,6 +77,8 @@ body {
 		top: 0;
 		z-index: 50;
 		display:  flex;
+	background: 	#005BC199;
+
 		}
 	
 		.header__logo-body {
@@ -78,15 +91,12 @@ body {
 			align-items: center;
 			justify-content: center;
 		}
-		.header__logo-name {
-		}
-		.header__container {
-		}
+		
 		
 		.header__menu {
+			padding: 0px 330px 0px 326px;
 		}
-		.menu {
-		}
+		
 		.menu__list {
 			display: flex;
 			align-items: center;
@@ -95,36 +105,85 @@ body {
 		.menu__item:not(:last-child) {
 			padding-right: 26px;
 		}
+		
 		.menu__link {
-font-family: Open+Sans;
-font-weight: 600;
-font-size: 14px;
-line-height: 19px;
-color: #FFFFFF;
+			font-family: Open+Sans;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 100%;
+			color: #FFFFFF;
 		}
+		.menu__link:hover{
+
+		text-decoration: underline;
+		}
+		/*---------------------------------------*/
 		.page {
 			flex: 1 1 auto;
-		}
-		.page__main-block {
 		}
 		.main-block {
 			position: relative;
 		}
+	
 		.main-block__container {
+			position: relative;
 		}
-		._container {
-		}
+
 		.man-block__body {
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			padding:202px 220px ;
+
+			
 		}
 		.main-block__title {
+			font-family: Oswald;
+			font-size: 48px;
+			line-height: 71px;
+			letter-spacing: 0.01em;
+			color: #FFFFFF;
+			padding: 0px 0px 40px 0px;
+			flex:0 1 100%;
+			z-index: 4;
 		}
 		.main-block__text {
+			font-family: Open+Sans;
+			font-size: 16px;
+			line-height: 22px;
+			color: #FFFFFF;
+			padding: 0px 0px 40px 0px;
+			z-index: 4;
 		}
 		.main-block__buttons {
+			
+
 		}
 		.main-block__button {
+			position: relative;
+			box-sizing: border-box;
+			min-height: 51px;
+			border: 1px solid #FFFFFF;
+			color: #FFFFFF;
+			font-family: Open Sans;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 22px;
+		text-align: center;
+		letter-spacing: 0.05em;
+		padding: 15px 40px;
+		z-index: 4;
+		}
+		.main-block__button:hover {
+	background: #ffffff48;
+	color:#005BC199;
 		}
 		.main-block__image {
+			position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 		}
-		._ibj {
-		}
+	
