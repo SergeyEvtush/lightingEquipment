@@ -49,7 +49,9 @@ body {
 		margin: 0px auto;
 		box-sizing: content-box;
 		}
-		._ibg{position: relative;}
+		._ibg{position: relative;
+		
+		}
 /*свойства только для картинки*/
 ._ibg img{
 	position: absolute;
@@ -57,18 +59,28 @@ body {
 	height: 100%;
 	top: 0;
 	left: 0;
-	object-fit: cover;
+	
 	}
+
 	.main-block__color{
 		position: absolute;
-		height: 100%;
+		min-height: 104%;
 		width:444px ;
+		max-width: 100%;
 		top: 0;
 		left: 0;
 		background: 	#005BC199;
 		z-index: 1;
 		margin:80px 0px  0px 0px ;
 	}
+	@media(max-width:970px){
+		.main-block__color{
+			
+			min-height: 94.5%;
+			
+		}
+	}
+	
 	/*стили шапки*/
 	.header{
 		position: absolute;
@@ -84,6 +96,7 @@ body {
 		.header__logo-body {
 			display: flex;
 			min-height: 80px;
+			max-height: 80px;
 			padding:11px 40px ;
 		}
 		.header__logo-image {
@@ -96,7 +109,13 @@ body {
 		.header__menu {
 			padding: 0px 330px 0px 326px;
 		}
-		
+		@media(max-width:1100px)
+		{
+			.header__menu {
+				padding: 0px 150px 0px 150px;
+			}
+
+		}
 		.menu__list {
 			display: flex;
 			align-items: center;
@@ -112,6 +131,9 @@ body {
 			font-size: 14px;
 			line-height: 100%;
 			color: #FFFFFF;
+			display: block;
+			min-width: 90px;
+			
 		}
 		.menu__link:hover{
 
@@ -123,10 +145,12 @@ body {
 		}
 		.main-block {
 			position: relative;
+			
 		}
 	
 		.main-block__container {
 			position: relative;
+			
 		}
 
 		.man-block__body {
@@ -135,6 +159,7 @@ body {
 			align-items: flex-start;
 			flex-direction: column;
 			padding:202px 220px ;
+			
 
 			
 		}
@@ -186,4 +211,64 @@ body {
 	top: 0;
 	left: 0;
 		}
+		.page__ourprojects{
+margin: 109px 0px 0px 0px;
+
+		}
+		
+		.page-container {
+			padding: 150px 0px 0px 0px;
+		
+		}
 	
+		.ourprojects__header {
+		}
+		.header-block {
+			display: flex;
+			align-items: flex-start;
+		}
+		.header-block__lines {
+		}
+		.lines-block {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			
+			width: 100px;
+			max-width: 100%;
+		}
+		.lines-block__item {
+		
+		}
+		.line__long {
+			height: 5px;
+			width: 100%;
+			background: #000;
+			margin:  0px 0px 13px  0px;
+		}
+		.line__shot {
+			height: 5px;
+			width: 50%;
+			background: #000;
+			
+		}
+		.header-block__title {
+			font-family: Oswald;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 44px;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: #343434;
+		}
+		.ourprojects__slider {
+		}
+		.ourprojects__slider-buttons {
+		}
+		.slider-buttons {
+		}
+		.button__prev {
+		}
+		.button__next {
+		}
