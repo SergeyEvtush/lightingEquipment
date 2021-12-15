@@ -18,8 +18,23 @@ responsive:[
 			arrows:false,
 			slidesToShow: 1		
 						},
-		}
-] 
-				
-									})
+			}
+		] 
+	}
+);
+$('.rentequipment__slider').slick({
+										arrows:true,
+										infinite: true,
+										slidesToShow: 1,
+										responsive:[
+											{
+											breakpoint: 615,
+											settings:{
+												arrows:false,
+															},
+											},
+											
+												] 
+									});
+								
 });

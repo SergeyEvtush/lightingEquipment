@@ -321,7 +321,7 @@ color: #343434;
 	/* Слайдер */
 .slider .slick-slider{margin:0px -15px;}
 
-.slick-list {
+.slider .slick-list {
 overflow: hidden;
 
 }
@@ -518,3 +518,213 @@ img.item__foto-catalog:hover{
 			padding:30px 0px 20px 0px ;
 			}
 }
+.page__rentequipment {
+}
+.rentequipment__container {
+	padding: 150px 0px 0px 0px;
+}
+@media(max-width:500px){
+
+	.rentequipment__container  {
+
+		padding: 50px 0px;
+		
+	}
+}
+
+.rentequipment__body {
+	display: flex;
+align-items: center;
+padding:40px 0px  0px 0px ;
+min-width: 0;
+}
+
+
+.rentequipment__content {
+	padding:0px 90px 0px 0px ;
+	min-width: 0;
+}
+@media(max-width:1022px){
+	.rentequipment__content {
+		padding:0px 40px 0px 0px ;
+		min-width: 0;
+	}
+}
+@media(max-width:978px){
+	.rentequipment__body {
+		flex-wrap: wrap;
+	}
+	.rentequipment__content {
+		padding:0px 0px 40px 0px ;
+		min-width: 0;
+	}
+
+}
+.content__paragraph{
+	font-family: Open+Sans;
+font-weight: 300;
+font-size: 18px;
+line-height: 25px;
+color: #343434;
+
+}
+.slider__border{
+		
+
+	padding: 30px;
+	border: 3px solid #005BC1;
+}
+.slider-rentequipment__item {
+	width: 665px;
+max-width: 100%;
+
+}
+.item__title {
+}
+.title__slide {
+	font-family: Oswald;
+font-size: 18px;
+line-height: 27px;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: #343434;
+padding: 0px 0px 45px 0px;
+}
+@media(max-width:540px){
+	.title__slide {
+		
+	padding: 0px 0px 25px 0px;
+	}
+
+}
+.item__body {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	
+}
+@media(max-width:460px){
+	.item__body {
+		flex-wrap: wrap;
+		
+	}
+
+}
+.item__context {
+	flex: 1 0 50%;
+}
+.item__context-title {
+	font-family: Oswald;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: #343434;
+padding: 0px 0px 30px 0px;
+}
+.item__context-text {
+}
+.context-text__list {
+}
+.text-list__items {
+	padding: 0px 0px 30px 0px;
+	list-style-type: disc;
+
+}
+@media(max-width:540px){
+	.text-list__items {
+		padding: 0px 0px 10px 0px;
+
+	
+	}
+
+}
+.items__text {
+	font-family: Open Sans;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 19px;
+color: #343434;
+}
+.item__foto {
+	margin:0px 30px 0px 0px ;
+
+}
+.item__foto-image {
+	width: 255px;
+	max-width: 100%;
+}
+.rentequipment__slider.slick-slider{
+	position: relative;
+	min-width: 0;
+}
+.rentequipment__slider .slick-arrow{
+	position: absolute;
+	border: solid 2px #1e587e;
+	z-index: 20;
+	width: 55px;
+	height: 55px;
+	font-size: 0;
+	}
+	/* Стрелка влево */
+	.rentequipment__slider .slick-prev{
+		right: 30px;
+		top: 30px;
+		border-bottom: 0px;
+	transform: rotate(90deg);
+	background: no-repeat    url('../img/ourprojects/arrow.png')  ;
+	background-position: 44% 50%;
+	background-size: 50%;
+	}
+	.rentequipment__slider .slick-next{
+	right: 85px;
+	top: 30px;
+	transform: rotate(270deg);
+	background: no-repeat center/50%  url('../img/ourprojects/arrow.png')  ;
+	}
+
+	/* Слайдер */
+	
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.rentequipment__slider .slick-list {
+	overflow: hidden;
+	
+	}
+/* Лента слайдов */
+.rentequipment__slider.slick-track{
+	display: flex;
+}
+.slider-rentequipment__item{
+	
+	
+	}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
