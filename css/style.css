@@ -73,14 +73,23 @@ body {
 		z-index: 1;
 		margin:80px 0px  0px 0px ;
 	}
-	@media(max-width:970px){
+	@media(max-width:990px){
 		.main-block__color{
 			
-			min-height: 94.5%;
-			
+			height: 94.5%;
+			max-width: 100%;
 		}
+		
+		
 	}
-	
+	@media(max-width:650px){
+		.main-block__color{
+			
+		display: none;
+		}
+		
+		
+	}
 	/*стили шапки*/
 	.header{
 		position: absolute;
@@ -152,16 +161,43 @@ body {
 			position: relative;
 			
 		}
-
+		@media(max-width:1300px){
+			.main-block__container {
+				margin: 0px 10px 0px 10px;
+				
+			}
+		}
 		.man-block__body {
 			position: relative;
 			display: flex;
 			align-items: flex-start;
 			flex-direction: column;
 			padding:202px 220px ;
-			
+		}
+		@media(max-width:840px){
+			.man-block__body {
 
-			
+				padding:202px 180px ;
+			}
+		}
+		@media(max-width:720px){
+			.man-block__body {
+
+				padding:202px 160px ;
+			}
+		}
+		@media(max-width:680px){
+			.man-block__body {
+
+				padding:202px 140px ;
+			}
+		}
+		@media(max-width:650px){
+			.man-block__body {
+
+				padding: 150px 0px;
+				margin: 0 auto;
+			}
 		}
 		.main-block__title {
 			font-family: Oswald;
@@ -172,6 +208,12 @@ body {
 			padding: 0px 0px 40px 0px;
 			flex:0 1 100%;
 			z-index: 4;
+		}
+		@media(max-width:350px){
+			.main-block__title {
+			font-size: 40px;
+			}
+
 		}
 		.main-block__text {
 			font-family: Open+Sans;
@@ -221,7 +263,19 @@ min-width: 0;
 		padding: 150px 0px 0px 0px;
 		position: relative;
 		}
+	@media(max-width:1300px){
+		.page__ourprojects{
+			margin: 109px 10px  0px 10px;
 	
+					}
+	}
+	@media(max-width:500px){
+		.page-container {
+
+			padding: 50px 0px;
+			
+		}
+	}
 		.ourprojects__header {
 			padding:  0px 0px 40px 0px;
 		}
@@ -264,18 +318,8 @@ letter-spacing: 0.05em;
 text-transform: uppercase;
 color: #343434;
 		}
-		/*slider*/
-	
-		
-		
-		
-		
-	
+
 	/* Слайдер */
-	.slider{
-
-
-	}
 .slider .slick-slider{margin:0px -15px;}
 /* Слайдер запущен */
 .slick-slider.slick-initialized{}
@@ -293,8 +337,9 @@ display: flex;
 }
 /* Слайд */
 .slider__item{
-
 max-width: 100%;
+position: relative;
+
 }
 .slider__item img{
 
@@ -363,7 +408,33 @@ background: grey;
 border-radius: 50%;
 margin: 0px 10px;
 }
+.ourprojects__item-card{
+position: absolute;
+padding:  20px 25px;
+right: 0;
+bottom: 0;
+background: #fff;
+margin: 35px;
+max-width: 100%;
+}
+.card__title{
+	font-family: Oswald;
+	font-size: 18px;
+	line-height: 27px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+padding: 0px  0px 14px 0px;
+}
+.card__text
+{
+	font-family: Open;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 19px;
+	color: #343434;
+	max-width: 200px;
+
+}
 
 
-		
-	
