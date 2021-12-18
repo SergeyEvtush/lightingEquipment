@@ -37,6 +37,7 @@ body {
 	font-weight: 500;
 	font-family: Oswald;
 }
+/*-----------------------------------------------*/
 .wraper{
 	display: flex;
 	flex-direction: column;
@@ -539,13 +540,16 @@ img.item__foto-catalog:hover{
 align-items: center;
 padding:40px 0px  0px 0px ;
 min-width: 0;
+
 }
 
 
 .rentequipment__content {
-	padding:0px 90px 0px 0px ;
-	min-width: 0;
+	padding:0px 95px 0px 0px ;
+	flex:0 0 40%;
+
 }
+
 @media(max-width:1022px){
 	.rentequipment__content {
 		padding:0px 40px 0px 0px ;
@@ -554,11 +558,11 @@ min-width: 0;
 }
 @media(max-width:978px){
 	.rentequipment__body {
-		flex-wrap: wrap;
+		
 	}
 	.rentequipment__content {
 		padding:0px 0px 40px 0px ;
-		min-width: 0;
+		
 	}
 
 }
@@ -575,8 +579,8 @@ color: #343434;
 	border: 3px solid #005BC1;
 }
 .slider-rentequipment__item {
-	width: 665px;
-max-width: 100%;
+
+
 
 }
 .title-block {
@@ -588,8 +592,10 @@ max-width: 100%;
 	color: #343434;
 	
 }
+
 .title__slide {
-	padding: 0px 0px 45px 0px;
+	padding: 0px 166px 45px 0px;
+
 }
 @media(max-width:540px){
 	.title__slide {
@@ -611,6 +617,7 @@ max-width: 100%;
 	}
 
 }
+
 .item__context {
 	flex: 1 0 50%;
 }
@@ -652,6 +659,20 @@ color: #343434;
 .item__foto-image {
 	width: 255px;
 	max-width: 100%;
+}
+.slider-rentequipment{
+	flex:1 1 50%;
+
+}
+@media(max-width:767px)
+{
+.rentequipment__body{
+	flex-direction: column;
+}
+.slider-rentequipment{
+max-width: 100%;
+
+}
 }
 .rentequipment__slider.slick-slider{
 	position: relative;
@@ -764,6 +785,7 @@ padding: 0px 60px 0px 0px;
 .item__block {
 	display: flex;
 	align-items: flex-start;
+	position: relative;
 }
 
 .block__title {
@@ -806,6 +828,12 @@ flex:50%;
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+.item_small__date{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
 }
 .newsblock-list__item {
 }
@@ -955,4 +983,3 @@ color: #FFFFFF;
 .develop_disain {
 }
 
-/*<div class="item__date items__text">27.01.2019</div>*/
