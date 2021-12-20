@@ -38,10 +38,10 @@ body {
 	font-weight: 500;
 	font-family: Oswald;
 }
-/*body._lock{
+body._lock{
 
 	overflow: hidden;
-	}*/
+	}
 /*-----------------------------------------------*/
 .wraper{
 	display: flex;
@@ -50,8 +50,9 @@ body {
 	overflow: hidden;
 	}
 	._container{
+		position: relative;
 		max-width: 1110px;
-		padding: 0px 15px;
+		padding: 0px 0px;
 		margin: 0px auto;
 		box-sizing: content-box;
 		}
@@ -82,16 +83,175 @@ body {
 
 
 	/*стили шапки*/
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		background: #005BC199;
+		max-height:80px ;
+		display: flex;
+		padding: 11px 5px;
+	}
+	.header__logotype {
+		display: flex;
+	    z-index: 5;
+	}
+	.logotype__image {
+		width: 58px;
+	}
+	.image-logotype {
+		width: 100%;
+	}
+	.menu__icon {
+		display: none;
+	}
+	.menu__list>li {
+		position: relative;
+		margin:0px 0px 0px 28px	;
+	}
+	.menu__list-item {
+	}
+	.item__list {
+	}
+	.menu__link {
+font-family: Open Sans;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+color: #FFFFFF;
 
-	
-
-
-
-	
-	
-	
+	}
+	.menu__link:hover {
+		text-decoration: underline;
+	}
+	._touch .menu__link{
+		flex: 1 1 auto;
 		
-		
+		}
+		._touch .menu__list>li
+		{
+		display: flex;
+		align-items: center;
+		}
+
+		@media(min-width:767px)
+		{
+		.menu__list{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			position: relative;
+		}
+		.menu__list>li{
+		padding: 11px 0px;
+			}
+		.container__container-body{
+		width: 100%;
+			padding: 0px  74px 0px 0px;
+			margin: 0 auto;
+			
+				}
+		}
+		@media(max-width:767px)
+		{
+			.menu__icon{
+				z-index: 5;
+				position: relative;
+				display: block;
+				position: absolute;
+				width: 30px;
+				height: 18px;
+				cursor: pointer;
+				right: 0;
+				margin: 0 20px;
+				}
+				/*рисуем бургер*/
+/*общие стили для полосок*/
+.menu__icon span,
+.menu__icon:before,
+.menu__icon:after
+{
+
+height: 10%;
+position: absolute;
+width: 100%;
+transition: all 0.3s ease 0s;
+background: #fff;
+}
+/*для того чтобы проявились псевдоэлементы*/
+.menu__icon:before,
+.menu__icon:after{
+content: "";
+
+}
+/*верхняя полоска*/
+.menu__icon:before{
+	top: 0;
+}
+/*нижняя полоска*/
+.menu__icon:after{
+	bottom: 0;
+}
+/*средняя полоска*/
+.menu__icon span{
+top: 50%;
+transform:scale(1)  translate(0px,-50%);
+
+}
+/*анимация иконки бургера ,при получении класса ._active изменяем вид иконки*/
+.menu__icon._active span{
+	transform:scale(0)  translate(0px,-50%);
+
+}
+.menu__icon._active::before{
+	top: 50%;
+transform:rotate(-45deg) translate(0px ,-50%);
+}
+.menu__icon._active::after{
+	bottom: 50%;
+transform:rotate(45deg) translate(0px ,50%);
+}
+/*стили для  выпадающего меню при мобильной версии*/
+
+.menu__body{
+position: fixed;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.9);
+padding: 100px 30px 30px 30px;
+transition: left  0.3s ease 0s;
+overflow: auto;
+}
+.menu__body._active{
+left: 0;
+}
+/*плашка для того чтобы пункты меню прятались за нее при скролле ,а не наезжали на логотип*/
+.menu__body::before{
+	content: "";
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 80px;
+	background: #005BC199;
+	z-index: 15;
+	}
+	/*-----------------------------------------------------------------*/
+	.menu__list >li{
+		flex-wrap: wrap;
+	margin: 0px 0px 30px 0px;
+	}
+	.menu__list >li:last-child{
+	margin-bottom: 0px;
+	}
+	.menu__link{
+		font-size: 24px;
+		}
+		}
 		/*---------------------------------------*/
 		.page {
 			flex: 1 1 auto;
@@ -111,7 +271,7 @@ body {
 			display: flex;
 			align-items: flex-start;
 			flex-direction: column;
-			padding:202px 220px ;
+			padding:202px ;
 		}
 		
 		.main-block__title {
@@ -184,8 +344,7 @@ min-width: 0;
 			display: flex;
 			align-items: flex-start;
 		}
-		.header-block__lines {
-		}
+	
 		.lines-block {
 			display: flex;
 			flex-direction: column;
@@ -256,6 +415,7 @@ width: 55px;
 height: 55px;
 margin: 150px 0px 0px 0px;
 font-size: 0;
+cursor: pointer;
 
 }
 /* Стрелка влево */
@@ -274,7 +434,7 @@ background: no-repeat center/50%  url('../img/ourprojects/arrow.png')  ;
 
 
 /* Стрелка не активная */
-.slick-arrow.slick-disabled{}
+
 /* Точки (булиты) */
 .slider  .slick-dots{
 	display: flex;
@@ -378,11 +538,12 @@ padding: 0px 30px 0px 30px;
 }
 .item__foto-catalog {
 	max-width: 100%;
-
+	
 }
 
 img.item__foto-catalog:hover{
 	opacity: 0.25;
+	cursor: pointer;
 }
 
 
@@ -419,11 +580,7 @@ color: #343434;
 	padding: 30px;
 	border: 3px solid #005BC1;
 }
-.slider-rentequipment__item {
 
-
-
-}
 .title-block {
 	font-family: Oswald;
 	font-size: 18px;
@@ -497,6 +654,7 @@ color: #343434;
 	width: 55px;
 	height: 55px;
 	font-size: 0;
+	cursor: pointer;
 	}
 	/* Стрелка влево */
 	.rentequipment__slider .slick-prev{
@@ -803,6 +961,7 @@ max-width: 100%;
 		}
 		.list-items__catalog{
 			flex:0 1 30%;
+		
 		}
 		.ourproduction__choise {
 			padding:30px 0px 20px 0px ;
